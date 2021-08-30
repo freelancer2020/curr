@@ -4,13 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Quick start
 
-1- git clone https://github.com/freelancer2020/currency.git
+1- git clone https://github.com/freelancer2020/curr.git
+
+2- cd /curr
  
-2- npm install
+3- npm install
 
-3- npm i --save-dev @types/react-router-dom
+4- npm i --save-dev @types/react-router-dom
 
-4- npm start
+5- npm start
 
 open http://localhost:3000
 
