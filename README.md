@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1- git clone https://github.com/freelancer2020/curr.git
 
 2- cd curr
- 
+
 3- npm install
 
 4- npm i --save-dev @types/react-router-dom
@@ -20,7 +20,6 @@ open http://localhost:3000
 
 I am using free API with limited requests, if you run over the limit use this one [ api_key=6d86f74ced6c4eb2b8dbbb624b9f4b71 ]
 
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -28,8 +27,6 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-
-
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
