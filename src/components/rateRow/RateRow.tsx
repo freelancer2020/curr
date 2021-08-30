@@ -1,7 +1,7 @@
 import React from "react";
 import { Skeleton } from "@material-ui/lab";
 
-import { makeStyles, Paper, Typography, Box } from "@material-ui/core";
+import { makeStyles, Paper, Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {

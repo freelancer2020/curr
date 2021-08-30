@@ -61,10 +61,10 @@ const AllRates: React.FC = () => {
     let url;
     if (currencyBase) {
       if (typeof currencyBase === "string") {
-        url = `https://exchange-rates.abstractapi.com/v1/live/?api_key=614854e10e114ee1b45e29a9af1dc601&base=${currencyBase}`;
+        url = `https://exchange-rates.abstractapi.com/v1/live/?api_key=3ca57f358f87497ebe1449138f3d5a82&base=${currencyBase}`;
       }
     } else {
-      url = `https://exchange-rates.abstractapi.com/v1/live/?api_key=614854e10e114ee1b45e29a9af1dc601&base=USD`;
+      url = `https://exchange-rates.abstractapi.com/v1/live/?api_key=3ca57f358f87497ebe1449138f3d5a82&base=USD`;
     }
 
     if (url) {
@@ -111,7 +111,7 @@ const AllRates: React.FC = () => {
     dispatch(allRatesActions.addBase(event.target.value));
     window
       .fetch(
-        `https://exchange-rates.abstractapi.com/v1/live/?api_key=614854e10e114ee1b45e29a9af1dc601&base=${event.target.value}`
+        `https://exchange-rates.abstractapi.com/v1/live/?api_key=3ca57f358f87497ebe1449138f3d5a82&base=${event.target.value}`
       )
       .then((response) => {
         if (response.status === 200) {

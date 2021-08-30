@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 //@types
 import { RootState } from "../store/store";
 import ReactDOM from "react-dom";
-import { Box, Typography, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({

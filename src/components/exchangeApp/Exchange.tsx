@@ -87,7 +87,7 @@ const Exchange: React.FC = () => {
   useEffect(() => {
     window
       .fetch(
-        "https://exchange-rates.abstractapi.com/v1/live/?api_key=614854e10e114ee1b45e29a9af1dc601&base=SEK"
+        "https://exchange-rates.abstractapi.com/v1/live/?api_key=3ca57f358f87497ebe1449138f3d5a82&base=SEK"
       )
       .then((response) => {
         if (response.status === 200) {
@@ -168,7 +168,7 @@ const Exchange: React.FC = () => {
       }
       window
         .fetch(
-          `https://exchange-rates.abstractapi.com/v1/live/?api_key=614854e10e114ee1b45e29a9af1dc601&base=${uq}`
+          `https://exchange-rates.abstractapi.com/v1/live/?api_key=3ca57f358f87497ebe1449138f3d5a82&base=${uq}`
         )
         .then((response) => {
           if (response.status === 200) {
@@ -300,6 +300,7 @@ const Exchange: React.FC = () => {
                 </Selector>
               </Grid>
             </Grid>
+
             <Grid
               item
               className={classes.conv}
@@ -321,6 +322,8 @@ const Exchange: React.FC = () => {
               </Link>
             </Grid>
           </Grid>
+
+          {/* above end */}
         </Box>
       </Grow>
     </Box>

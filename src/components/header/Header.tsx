@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography, Paper } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -8,11 +8,12 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
     display: "flex",
     alignItems: "center",
-    backgroundColor: "#333231",
+    // backgroundColor: "#333231",
+    backgroundColor: "#F4F5F6",
   },
   typo: {
     fontFamily: "Aclonica",
-    color: "#fff",
+    color: "#2b2b2b",
     userSelect: "none",
     cursor: "pointer",
     paddingLeft: theme.spacing(8),
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 const Header: React.FC = () => {
   const classes = useStyles();
   return (
-    <Box className={classes.header}>
+    <Paper className={classes.header}>
       <Link to="/" style={{ textDecoration: "none" }}>
         <Typography
           className={classes.typo}
@@ -30,7 +31,7 @@ const Header: React.FC = () => {
           children="exchangerates"
         />
       </Link>
-    </Box>
+    </Paper>
   );
 };
 
