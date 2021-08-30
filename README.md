@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1- git clone https://github.com/freelancer2020/curr.git
 
-2- cd /curr
+2- cd curr
  
 3- npm install
 
