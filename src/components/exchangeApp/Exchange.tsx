@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import Skeletons from "../skeletons/Skeletons";
 import { useSelector, useDispatch } from "react-redux";
 
+// re-use
 import Selector from "../../ReusableComponents/Selector";
+
+// validation
+import { isValidate } from "../../validations/inputValidation";
 
 //Actions
 import { exchangeActions } from "../../store/exrate";
@@ -138,10 +142,18 @@ const Exchange: React.FC = () => {
 
   const rateHandler = (event: React.ChangeEvent<{ value: unknown }>) => {
     event.preventDefault();
-    dispatch(exchangeActions.setRate(event.target.value));
-    setTimeout(() => {
-      calculateRate();
-    }, 1000);
+    if (typeof event.target.value === "string") {
+      const validate = isValidate(event.target.value);
+      if (validate) {
+        dispatch(exchangeActions.inputValidate(true));
+        dispatch(exchangeActions.setRate(event.target.value));
+        setTimeout(() => {
+          calculateRate();
+        }, 1000);
+      } else {
+        dispatch(exchangeActions.inputValidate(false));
+      }
+    }
   };
 
   const calculateRate = () => {

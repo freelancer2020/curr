@@ -5,8 +5,9 @@ type Data = {
   toCurrency: string;
   rate: string;
   dataEntries: [string];
-  failed: boolean;
   error: string;
+  failed: boolean;
+  validInput: boolean;
 };
 
 const exchangeData: Data = {
@@ -14,8 +15,9 @@ const exchangeData: Data = {
   toCurrency: "PLN",
   rate: "0",
   dataEntries: [""],
-  failed: false,
   error: "",
+  failed: false,
+  validInput: true,
 };
 
 export const exchange = createSlice({
@@ -65,6 +67,15 @@ export const exchange = createSlice({
           state.error =
             "API network error - It's free API, the response might be late!";
           state.failed = true;
+      }
+    },
+    inputValidate(state, action) {
+      state.validInput = action.payload;
+      if (action.payload === true) {
+        state.failed = false;
+      } else {
+        state.failed = true;
+        state.error = "Rates should be only numbers!";
       }
     },
   },
